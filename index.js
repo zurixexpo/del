@@ -1,6 +1,6 @@
 const io = require('socket.io')({
 	cors:{
-		origin: ['https://subtle-capybara-09043d.netlify.app/'],
+		origin: ['https://snale.netlify.app/'],
 		methods: ["GET", "POST"]
 	}
 })
