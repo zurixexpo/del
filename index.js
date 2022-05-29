@@ -1,3 +1,4 @@
+var cors = require('cors');
 const io = require('socket.io')({
 	cors:{
 		origin: ['https://snale.netlify.app/'],
