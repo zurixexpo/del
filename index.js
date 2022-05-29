@@ -8,7 +8,7 @@ app.use(cors())
 const server = http.createServer(app);
 const io = socketio(server, {
     cors: {
-        origin: `https://snale.netlify.app/`,
+        origin: `https://snale.netlify.app`,
         methods: ["GET", "POST"],
         credentials: true
       }
