@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8800');
+const socket = io('https://snake-testapp.herokuapp.com/');
 
 const form = document.getElementById('my-form');
 const input = document.getElementById('myinp');
