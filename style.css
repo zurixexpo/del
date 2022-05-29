@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.msg{
+	padding: 8px 16px;
+	background: black;
+	color: white;
+	border-radius: 6px;
+	max-width: 50%;
+	min-width: 30%;
+}
+#game-con{
+	width: 360px;
+	height: 360px;
+	background: #ddd;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.boxes:nth-child(even){
+	width: 120px;
+	height: 120px;
+	background: green;
+}
+.boxes:nth-child(odd){
+	width: 120px;
+	height: 120px;
+	background: blue;
+}
