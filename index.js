@@ -1,6 +1,7 @@
 const io = require('socket.io')({
 	cors:{
-		origin: ['https://subtle-capybara-09043d.netlify.app/']
+		origin: ['https://subtle-capybara-09043d.netlify.app/'],
+		methods: ["GET", "POST"]
 	}
 })
 
@@ -24,4 +25,4 @@ io.on('connection', socket =>{
 	});
 });
 
-io.listen(process.env.PORT || 3000)
+io.listen(process.env.PORT || 3000);
