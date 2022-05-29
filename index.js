@@ -1,10 +1,20 @@
+const express = require('express');
+const path = require('path');
+const http = require('http');
 var cors = require('cors');
-const io = require('socket.io')({
-	cors:{
-		origin: ['https://snale.netlify.app/'],
-		methods: ["GET", "POST"]
-	}
-})
+const socketio = require('socket.io');
+const app = express();
+app.use(cors())
+const server = http.createServer(app);
+const io = socketio(server, {
+    cors: {
+        origin: `https://snale.netlify.app/`,
+        methods: ["GET", "POST"],
+        credentials: true
+      }
+});
+
+
 
 var users = {};
 
@@ -25,5 +35,7 @@ io.on('connection', socket =>{
 		delete users[socket.id]
 	});
 });
-
-io.listen(process.env.PORT || 3000);
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+    console.log(`Server is runing on port ${PORT}`);
+});
